@@ -1,0 +1,1 @@
+This repo will contain all the low level programming (c). Well it contains bash executable files of different tasks.
