@@ -1,2 +1,2 @@
 #!/bin/bash
-export CFILE=$((gcc -E 0-preprocessor.c -o c))
+gcc $CFILE -E c
