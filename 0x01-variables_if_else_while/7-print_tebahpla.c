@@ -6,19 +6,12 @@
  */
 int main(void)
 {
-	int _digit = 48;
-	int _hex = 97;
+	int _digit = 122;
 
 	while (_digit < 58)
 	{
 		putchar(_digit);
-		_digit++;
-	}
-	while (_hex < 103)
-	{
-		putchar(_hex);
-		_hex++;
+		_digit--;
 	}
 	putchar(10);
-	return (0);
-}
+	return (0);}
