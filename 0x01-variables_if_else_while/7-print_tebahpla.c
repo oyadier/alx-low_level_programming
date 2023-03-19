@@ -7,7 +7,7 @@
 int main(void)
 {
 	int _digit = 48;
-	int _hex = 79;
+	int _hex = 97;
 
 	while (_digit < 57)
 	{
