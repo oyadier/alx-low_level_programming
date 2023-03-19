@@ -5,11 +5,11 @@
  */
 int main(void)
 {
-	int _numbers = 48;
+	int _numbers = 0;
 
-	while (_numbers < 58)
+	while (_numbers < 10)
 	{
-		putchar(_number);
+		printf("%d", _numbers);
 		_numbers++;
 	}
 	putchar(10);
