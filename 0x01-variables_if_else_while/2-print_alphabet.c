@@ -6,9 +6,11 @@
  */
 int main(void)
 {
-	for (int ch = 'a'; ch <= 'z'; ch++)
+	int n = 97;
+	while (n < 123)
 	{
 		putchar(ch);
+		n++;
 	}
 		putchar("\n");
 	return (0);
