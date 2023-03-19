@@ -9,7 +9,7 @@ int main(void)
 	int _digit = 48;
 	int _hex = 97;
 
-	while (_digit < 57)
+	while (_digit < 58)
 	{
 		putchar(_digit);
 		_digit++;
