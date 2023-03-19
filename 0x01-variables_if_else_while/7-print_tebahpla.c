@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int n = 97;
+	int _al_reverse = 122;
 
-	while (n < 123)
+	while (_al_reverse > 96)
 	{
 		putchar(_al_reverse);
 		n++;
