@@ -11,7 +11,7 @@ int main(void)
 	while (_al_reverse > 96)
 	{
 		putchar(_al_reverse);
-		n++;
+		n--;
 	}
 	putchar(10);
 	return (0);
