@@ -1,26 +1,28 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
+
 /**
- *  main: this generate random numbers
+ * main: this contains only random numbers
  *
- *  Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
-int main(void)
+int main (void)
 {
 	int n;
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n > 0)
+	int last_num = n % 10;
+	if (last_numb > 5)
 	{
-		printf("%d is positive", n);
+		printf("Last digit of %d is %d and is less than 6 and not 0", n , last_num);
 	}
-	else if (n == 0)
+	else if (last_num == 0)
 	{
-		printf("%d is zero", n);
+		print("Last digit of %d is %d and is 0",n,last_num);
 	}
-	else 
-	{ 
-		print("%d is negative", n);
+	else
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0",n,last_num);
 	}
-	return (0);
 }
