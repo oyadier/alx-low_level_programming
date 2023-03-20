@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int _digit = 47;
+	int _digit = 48;
 
 	while (_digit < 58)
 	{
