@@ -8,11 +8,11 @@ int main(void)
 {
 	int _digit = 122;
 
-	while (_digit > 96)
+	while (_digit > 98)
 	{
 		putchar(_digit);
 		_digit--;
 	}
-	putchar(10)
+	putchar(10);
 	return (0);
 }
