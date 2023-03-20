@@ -7,7 +7,7 @@
 int main(void)
 {
 	int _digit = 48;
-	int new_line ; 32;
+	int new_line = 32;
 
 	while (_digit < 58)
 	{
@@ -18,7 +18,7 @@ int main(void)
 		}
 		else
 		{
-			putchar(_diigit);
+			putchar(_digit);
 			putchar(44);	
 		}
 		putchar(new_line);
