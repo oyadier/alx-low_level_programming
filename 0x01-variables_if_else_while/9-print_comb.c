@@ -13,13 +13,14 @@ int main(void)
 		if (_digit ==57)
 		{
 			putchar(_digit);
+			_digit++;
 		}
 		else
 		{
-		putchar(_digit);
-		putchar(44);
-		putchar(32);
-		_digit++;
+			putchar(_digit);
+			putchar(44);
+			putchar(32);
+			_digit++;
 		}
 	}
 	return (0);
