@@ -21,7 +21,7 @@ int main(void)
 			putchar(44);
 			_digit++;
 		}
-			putchar(32);
+	putchar(32);
 	}
 	putchar(10);
 	return (0);
