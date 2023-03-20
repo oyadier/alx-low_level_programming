@@ -10,10 +10,17 @@ int main(void)
 
 	while (_digit < 58)
 	{
-		putchar(_digit);
-		putchar(44);
-		putchar(32);
-		_digit++;
+		if (_digit == 57)
+		{
+			putchar(_digit);
+		}
+		else
+		{
+			putchar(_digit);
+			putchar(44);
+			putchar(32);
+			_digit++;
+		}
 	}
 	putchar(10);
 	return (0);
