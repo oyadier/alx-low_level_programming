@@ -13,6 +13,7 @@ int main(void)
 		putchar(_digit);
 		putchr(44);
 		putchar(32);
+		_digit--;
 	}
 	putchar(10);
 	return (0);
