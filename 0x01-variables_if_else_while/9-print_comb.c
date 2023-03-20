@@ -7,21 +7,22 @@
 int main(void)
 {
 	int _digit = 48;
+	int new_line ; 32;
 
 	while (_digit < 58)
 	{
 		if (_digit == 57)
 		{
 			putchar(_digit);
-			_digit++;
+			new_line =10;
 		}
 		else
 		{
-			putchar(_digit);
-			putchar(44);
-			_digit++;
+			putchar(_diigit);
+			putchar(44);	
 		}
+		putchar(new_line);
+		_digit++;
 	}
-	putchar(10);
 	return (0);
 }
