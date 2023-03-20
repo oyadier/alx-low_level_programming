@@ -8,7 +8,7 @@ int main(void)
 {
 	int _digit = 122;
 
-	while (_digit > 98)
+	while (_digit > 96)
 	{
 		putchar(_digit);
 		_digit--;
