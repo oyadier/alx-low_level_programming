@@ -14,12 +14,12 @@ int main(void)
 		if (_digit == 57)
 		{
 			putchar(_digit);
-			new_line =10;
+			new_line = 10;
 		}
 		else
 		{
 			putchar(_digit);
-			putchar(44);	
+			putchar(44);
 		}
 		putchar(new_line);
 		_digit++;
