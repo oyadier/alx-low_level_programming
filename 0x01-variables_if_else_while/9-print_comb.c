@@ -11,7 +11,7 @@ int main(void)
 	while (_digit < 58)
 	{
 		putchar(_digit);
-		putchr(44);
+		putchar(44);
 		putchar(32);
 		_digit--;
 	}
