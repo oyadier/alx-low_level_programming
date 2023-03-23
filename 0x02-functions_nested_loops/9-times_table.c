@@ -17,11 +17,11 @@ void times_table(void)
 			result = outer * inner;
 			if (inner == 9)
 			{
-				printf("%2d ", result);
+				printf("%2d", result);
 			}
 			else
 			{
-			printf("%2d ", result);
+			printf("%2d, ", result);
 			}
 		}
 		printf("\n");
