@@ -9,21 +9,30 @@ void times_table(void)
 	int outer, inner;
 	int result;
 
-	for (outer = 0; outer < 10; outer++)
+	for (outer = 0; outer <= 9; outer++)
 	{
-		for (inner = 0; inner < 10; inner++)
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
+		for (inner = 1; inner <= 9; inner++)
 		{
-
-			result = outer * inner;
-			if (inner == 9)
+			result = (outer * inner);
+			if ((result / 10) > 0)
 			{
-				printf("%2d", result);
+				_putchar((result / 10) + '0');
 			}
 			else
 			{
-			printf("%2d, ", result);
+			_putchar(' ');
+			}
+			_putchar((result % 10) + '0');
+
+			if (inner < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
 			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
