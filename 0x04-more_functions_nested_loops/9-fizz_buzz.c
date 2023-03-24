@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * fizz_buzz - it print fizz_buzz
  * Return: Always 0 success
