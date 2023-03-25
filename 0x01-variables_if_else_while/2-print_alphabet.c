@@ -10,7 +10,7 @@ int main(void)
 
 	while (n < 123)
 	{
-		putchar(_al_reverse);
+		putchar(n);
 		n++;
 	}
 	putchar(10);
