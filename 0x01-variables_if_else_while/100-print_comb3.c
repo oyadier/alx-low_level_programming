@@ -11,7 +11,7 @@ int main(void)
 	int inner;
 	int size = 9;
 	int _increment = 49;
-	int k;
+	int space = 32;
 
 	for (count = 0; count <= 10; count++)
 	{
@@ -21,19 +21,16 @@ int main(void)
 			putchar(_f_digit);
 			if (_f_digit == 56)
 			{
-				for (k = 0; k <= 1; k++)
-				{
 				putchar(_s_digit);
-				_s_digit -= 25;
-				}
+				space = 10;
 			}
 			else
 			{
 				putchar(_s_digit);
 				putchar(',');
-				putchar(' ');
 			}
 			_s_digit++;
+			putchar(space);
 		}
 		_increment++;
 		_f_digit++;
