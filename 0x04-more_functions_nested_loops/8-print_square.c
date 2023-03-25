@@ -1,9 +1,11 @@
 #include "main.h"
- /**
+
+/**
  * print_square - print symbols in a square form
  * @size: the size of the square
  * Return: void
- */
+*/
+
 void print_square(int size)
 {
 	int outer;
