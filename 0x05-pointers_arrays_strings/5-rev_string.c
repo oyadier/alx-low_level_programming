@@ -11,6 +11,8 @@ void rev_string(char *str)
 	int asci = -1;
 	int length = 0;
 	int loop;
+	int i;
+	int temp[1000];
 
 	while (*(str + length) != '\0')
 	{
@@ -19,11 +21,16 @@ void rev_string(char *str)
 		asci++;
 	}
 
+
 	for (loop = 1; loop <= length; loop++)
 	{
-	_putchar(*(str + asci));
+		temp[loop - 1] = *(str + asci);
 		asci--;
 	}
-	_putchar('\n');
+
+	for (i = 0; i < length; i++)
+	{
+		str[i] = temp[i];
+	}
 
 }
