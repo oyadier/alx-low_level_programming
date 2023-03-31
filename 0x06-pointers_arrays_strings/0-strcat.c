@@ -5,17 +5,17 @@
  * @src: the other string pointer
  * Return: nothing
  */
-void _strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int _d_length = 0;
 	int _s_length = 0;
 
-	while (dest(_d_length) != '\0')
+	while (dest[_d_length] != '\0')
 	{
 		_d_length++;
 	}
 
-	while (src(_s_length) != '\0')
+	while (src[_s_length] != '\0')
 	{
 		dest[_d_length] = src[_s_length];
 		_d_length++;
@@ -23,3 +23,4 @@ void _strcat(char *dest, char *src)
 	}
 	dest[_d_length] = '\0';
 	return (dest);
+}
