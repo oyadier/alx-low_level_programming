@@ -18,10 +18,12 @@ void puts_half(char *str)
 	if (length % 2 == 0)
 	{
 		half = length / 2;
+		half--;
 	}
 	else
 	{
 		half = (length - 1) / 2;
+		half++;
 	}
 
 	while (str[half] != '\0')
