@@ -16,8 +16,7 @@ void puts2(char *str)
 		length++;
 	}
 
-
-
+i
 	for (loop = 0; loop <= length; loop++)
 	{
 		if (loop % 2 == 0)
@@ -26,5 +25,4 @@ void puts2(char *str)
 		}
 
 	}
-	_putchar('\n');
 }
