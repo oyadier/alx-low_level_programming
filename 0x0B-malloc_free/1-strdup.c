@@ -2,6 +2,23 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - returns the length of a string
+ * @str: the input string pointer parameter
+ * Return: integer, string length
+ */
+
+int _strlen(char *str)
+{
+	int length = 0;
+
+	while (*(str + length) != '\0')
+	{
+		length++;
+	}
+	return (length);
+}
+
+/**
  * _strdup - nction that returns a pointer to a
  * newly allocated space in memory,
  * @str: the array of string pointer argument
@@ -41,19 +58,3 @@ char *_strdup(char *str)
 	return (dup);
 }
 
-/**
- * _strlen - returns the length of a string
- * @str: the input string pointer parameter
- * Return: integer, string length
- */
-
-int _strlen(char *str)
-{
-	int length = 0;
-
-	while (*(str + length) != '\0')
-	{
-		length++;
-	}
-	return (length);
-}
