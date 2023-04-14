@@ -36,18 +36,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 
-	s1_len = _strlen(s1);
-	s2_len = _strlen(s2);
-
+	for (s1_len; s1[s1_len] != '\0'; s1_len++)
+	{
+	}
+	for (s2_len; s2[s2_len] != '\0' && s2_len < n; s1_len++)
+        {
+        }
 	concat = malloc(sizeof(char) * (s1_len + s2_len + 1));
 
 	if (concat == NULL)
 	{
 		return (NULL);
-	}
-	if (n >= s2_len)
-	{
-		n = s2_len;
 	}
 
 	for (len = 0; len < s1_len; len++)
