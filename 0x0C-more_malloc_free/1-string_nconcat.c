@@ -7,7 +7,7 @@
  */
 int _strlen(char *str)
 {
-	int length = 0;
+	unsigned int length = 0;
 
 	while (*(str + length) != '\0')
 	{
@@ -23,9 +23,8 @@ int _strlen(char *str)
  * Return: string pointers of concatenaed string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
-{
-	unsigned s1_len, len;
-	unsigned int s2_len, i;
+{	
+	unsigned int len, s1_len, s2_len, i;
 	char *concat;
 
 	if (s1 == NULL)
