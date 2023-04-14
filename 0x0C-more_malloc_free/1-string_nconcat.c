@@ -24,8 +24,8 @@ int _strlen(char *str)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int s1_len, len = 0;
-	unsigned int s2_len, i = 0;
+	int s1_len, len;
+	unsigned int s2_len, i;
 	char *concat;
 
 	if (s1 == NULL)
@@ -46,29 +46,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	while (len < s1_len)
-	{
-		*(concat + len) = *(s1 + len);
-		len++;
-	}
 	if (n >= s2_len)
 	{
-		while (i < s2_len)
-		{
-			concat[len] = s2[i];
-			i++;
-			len++;
-		}
+		n = s2_len
 	}
-	else
+
+	for (len = 0; len < s1_len; len++)
 	{
-		while (i < n)
-		{
-			concat[len] = s2[i];
-			i++;
-			len++;
-		}
+		*(concat + len) = *(s1 + len);/*copy first string a string pointer*/
 	}
+	for (i = 0; i < n; i++)
+	{
+		concat[len++] = s2[i]; /*add the second string the first*/
+	}
+
 	concat[len] = '\0';
 	return (concat);
-}
+
