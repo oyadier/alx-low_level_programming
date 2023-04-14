@@ -5,7 +5,7 @@
  * @str: the input string pointer parameter
  * Return: integer, string length
  */
-int _strlen(char *str)
+unsigned int _strlen(char *str)
 {
 	unsigned int length = 0;
 
@@ -23,7 +23,7 @@ int _strlen(char *str)
  * Return: string pointers of concatenaed string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
-{	
+{
 	unsigned int len, s1_len, s2_len, i;
 	char *concat;
 
