@@ -54,7 +54,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		*(concat + len) = *(s1 + len);/*copy first string a string pointer*/
 	}
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; s2[i] != '\0' && i < n; i++)
 	{
 		concat[len++] = s2[i]; /*add the second string the first*/
 	}
