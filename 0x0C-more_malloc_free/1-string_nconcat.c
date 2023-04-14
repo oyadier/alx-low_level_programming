@@ -39,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		*(concat + len) = *(s1 + len);/*copy first string a string pointer*/
 	}
-	for (i = 0; i < n; i++)
+	for (i = 0; i < s2_len; i++)
 	{
 		concat[len + i] = s2[i]; /*add the second string the first*/
 	}
