@@ -56,7 +56,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (i = 0; i < n; i++)
 	{
-		concat[len + i] = s2[i]; /*add the second string the first*/
+		concat[len++] = s2[i]; /*add the second string the first*/
 	}
 
 	concat[len] = '\0';
