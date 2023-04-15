@@ -22,8 +22,12 @@ int main(int argc, char **argv)
 		for (i = 1; i < argc; i++)
 		{
 			if (!atoi(argv[i]))
+	/**
+	 * by using atoi() the system will print
+	 * Error even if the integer is 0. I should use isdigit
+	 */
 			{
-				
+
 				printf("Error\n");
 				return (1);
 
