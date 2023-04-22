@@ -9,47 +9,37 @@
 void print_all(const char * const format, ...)
 {
 	va_list _elem;
-	int _elem_count = 0;
-	char c;
-	int i;
-	float f;
+	int _elem_count = 0, pos = 0;
+	char *sep = ", ";
 	char *s;
 
 	va_start(_elem, format);
+	while (format && format[pos])
+		pos++;
+
 	while (format && format[_elem_count])
 	{
-		c = format[_elem_count];
-		switch (c)
+		if (_elem_count == (pos - 1))
+		{
+			sep = "";
+		}
+		switch (format[_elem_count])
 		{
 			case 'c':
-				i = va_arg(_elem, int);
-				printf("%c", i);
-				break;
-			case 'f':
-				f = va_arg(_elem, double);
-				printf("%f", f);
+				printf("%c%s",  va_arg(_elem, int), sep);
 				break;
 			case 'i':
-				i = va_arg(_elem, int);
-				printf("%d", i);
+				printf("%d%s", va_arg(_elem, int), sep);
+				break;
+			case 'f':
+				printf("%f%s", va_arg(_elem, double), sep);
 				break;
 			case 's':
-				s = va_arg(_elem, char*);
-				if (s == NULL)
-				{
-					printf("(nil)");
-				}
-				else
-				{
-					printf("%s", s);
-				}
+				s = va_arg(_elem, char *);
+				if (!s)
+					s = "(nil)";
+				printf("%s%s", s, sep);
 				break;
-			default:
-				break;
-		}
-		if (format[_elem_count + 1])
-		{
-			printf(", ");
 		}
 		_elem_count++;
 	}
