@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 	int leading_zero = 0;
 
 
-	pos = ((unsigned long int) 1) << (bits_size - 1);
+	pos =  1 << (bits_size - 1);
 	for (i = 0; i < bits_size; ++i)
 	{
 		if (n & pos)
