@@ -7,3 +7,15 @@ The following are the resources needed
 2. [Single Linked List](https://www.youtube.com/results?search_query=linked+lists)
 3. [Data Structures](https://intranet.alxswe.com/concepts/120)
 # Bit Manipulation
+
+
+# FILE I/O
+1. [File directors](https://en.wikipedia.org/wiki/File_descriptor)
+2. [More on Youtube](https://www.youtube.com/watch?v=e-srF6c3TJ8)
+3. man or help:
+
+[```open```](https://www.man7.org/linux/man-pages/man2/open.2.html)
+[```close```](https://man7.org/linux/man-pages/man2/close.2.html)
+[```read```](https://man7.org/linux/man-pages/man2/read.2.html)
+[```write```](https://man7.org/linux/man-pages/man2/write.2.html)
+[```dprintf```](https://man7.org/linux/man-pages/man3/dprintf.3p.html)
