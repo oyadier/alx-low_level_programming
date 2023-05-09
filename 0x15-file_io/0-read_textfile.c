@@ -16,6 +16,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t r_bytes;
 	ssize_t w_bytes;
 
+	if (filename == NULL)
+		return (0);
+
 	file = fopen(filename, "r");
 	if (file == NULL)
 		return (0);
