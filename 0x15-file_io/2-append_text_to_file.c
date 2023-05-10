@@ -20,8 +20,8 @@ int append_text_to_file(const char *filename, char *text_content)
 	fptr = fopen(filename, "a");
 	if (!fptr)
 		return (-1);
-	else
-		fputs(text_content, fptr);
+
+	fputs(text_content, fptr);
 
 	fclose(fptr);
 
