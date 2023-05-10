@@ -21,7 +21,8 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (!fptr)
 		return (-1);
 
-	fputs(text_content, fptr);
+	if (text_content)
+		fputs(text_content, fptr);
 
 	fclose(fptr);
 
