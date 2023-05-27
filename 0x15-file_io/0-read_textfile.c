@@ -1,52 +1,40 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include "main.h"
 /**
- * read_textfile - reads a text file and prints
- *		 it to the POSIX standard output.
- * @filename: file to be read
- * @letters: buffer size
- * Return: the number of bytes written to stdo
+ * read_textfile - Reads a text file and prints it to POSIX stdout.
+ * @filename: A pointer to the name of the file.
+ * @letters: The number of letters the
+ *           function should read and print.
+ *
+ * Return: If the function fails or filename is NULL - 0.
+ *         O/w - the actual number of bytes the function can read and print.
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *file;
+	ssize_t o, r, w;
 	char *buffer;
-	ssize_t r_bytes;
-	ssize_t w_bytes;
 
 	if (filename == NULL)
 		return (0);
 
-	file = fopen(filename, "r");
-	if (file == NULL)
-		return (0);
-
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
-	{
-		fclose(file);
 		return (0);
-	}
 
-	r_bytes = fread(buffer, sizeof(char), letters, file);
-	if (r_bytes == 0)
+	o = open(filename, O_RDONLY);
+	r = read(o, buffer, letters);
+	w = write(STDOUT_FILENO, buffer, r);
+
+	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
-		fclose(file);
 		free(buffer);
 		return (0);
 	}
 
-	w_bytes = fwrite(buffer, sizeof(char), r_bytes, stdout);
-	if (w_bytes != r_bytes)
-	{
-		return (0);
-	}
-
-	fclose(file);
 	free(buffer);
+	close(o);
 
-	return (w_bytes);
+	return (w);
 }
-
