@@ -12,10 +12,11 @@ void print_binary(unsigned long int n)
 	unsigned long int bits_size = sizeof(unsigned long int) * 8;
 	unsigned long int pos;
 	unsigned long int i;
+	unsigned long int ini_bit = 1;
 	int leading_zero = 0;
 
 
-	pos = ((unsigned long int) 1) << (bits_size - 1);
+	pos =  ini_bit << (bits_size - 1);
 	for (i = 0; i < bits_size; ++i)
 	{
 
