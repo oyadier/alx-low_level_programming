@@ -28,3 +28,4 @@ unsigned int binary_to_uint(const char *str)
 
 	return (total);
 }
+
