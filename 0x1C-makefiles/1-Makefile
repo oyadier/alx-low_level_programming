@@ -1,0 +1,12 @@
+# Make an executable using magrons
+CC = gcc
+SRC = *.c
+
+all: school
+
+school:$(SRC)
+	$(CC) $(SRC) -o school
+main.o: main.c
+	$(CC) main.c -c
+school.o: school.c
+	$(CC) school.c -c
