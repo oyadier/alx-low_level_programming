@@ -10,4 +10,4 @@ $(NAME):$(OBJ)
 	$(CC) $(OBJ) -o school
 
 %.o:%.c
-	$(CC) -c $<
+	$(CC) $(SRC) -c 
